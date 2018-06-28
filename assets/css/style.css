@@ -24,19 +24,11 @@ h1 {
 a {
   color:#777777;
 }
-
-#fig {
-  margin: 5%;
-  text-align: center;
-  font-size: 20px;
-  margin-right: 20px;
+a:active {
+  color: #65c2bd;
 }
-
-#box {
-  width: 100%;
-  background:#cccccc;
-  overflow: auto;
-  clear: both;  
+a:hover{
+  font-size: 20px;
 }
 
 .container {
@@ -45,14 +37,19 @@ a {
   margin-top: 30px;
   margin-bottom: 90px;
   position: relative;
-  background:#ffffff;
-  color: #777777;
+  /*background:#ffffff;
+  color: #777777;*/
+  background:url("contact_wallpaper.png");
+  color:ivory;
   overflow: auto;
 }
 
-hr {
-  margin-left: 20px;
-  margin-right: 20px;
+#box {
+  width: 100%;
+  background:url("box_wallpaper.jpg");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("box_wallpaper.jpg");
+  overflow: auto;
+  clear: both;  
 }
 
 #pic {
@@ -62,18 +59,67 @@ hr {
   width: 150px;
 }
 
+#logo {
+  
+  float: right;
+  height:80px;
+  width:130px;
+}
+
 p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 25px;
   padding: 10px;
-  color: #777777;
+  /*color: #777777;*/
+  color:ivory;
 }
 
 h2 {
-  color: #4aaaa5;
+  color: #65c2bd;
   padding:15px;
   font-family: 'Times New Roman', Times, serif;
+}
+
+#portf{
+  background:url("port_wallpaper.jpg");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("port_wallpaper.jpg");
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+span{
+  color: white;
+  text-align: center;
+}
+span:hover{
+  font-size: 20px;
+}
+*{
+  box-sizing:border-box;
+}
+.row, .row > .column {
+  padding:8px;
+}
+.column{
+  float:left;
+  width:30%;
+  text-align: center;
+}
+.row:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.content{
+  padding:10px;
+  text-align: center;
+}
+
+#contactB {
+  background:url("contact_wallpaper.png");
+  color:ivory;
 }
 
 /*#footline {
@@ -95,13 +141,14 @@ footer {
 
 #form1 {
   padding:30px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 input[type=submit] {
   background-color:#4aaaa5;
   color: white;
-  font-size: 14px;
+  font-size: 20px;
   padding: 10px;
   cursor: pointer;
   margin-top: 10px;
@@ -126,25 +173,24 @@ figure{
 }
 
 .port {
-  float: left;
+  /*float: left;*/
   margin: 20px;
   height:250px;
   width:250px;
 }
-
-figcaption{
-  background-color: #4aaaa5;
-  color:white;
-  width:90px;
-  height: 35px;
-  margin-top: 270px;
-  margin-left: 5%;
-  text-align: center;
+.link{
+  color:ivory;
+  margin:10px;
+}
+.link:hover{
   font-size: 20px;
-  padding: 20px;
-  padding-left: 85px;
-  padding-right: 85px;
-  position:relative;
+}
+
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+  color:ivory;
+  background-color: ivory;
 }
 
 @media screen and (max-width:980px) {
@@ -161,24 +207,8 @@ figcaption{
     height: 200px;
     width: 200px;
   }
-  .port {
-    float: left;
-    height:200px;
-    width:200px;
-  }
-  figcaption{
-    background-color: #4aaaa5;
-    color:white;
-    width:135px;
-    height: 30px;
-    margin-top: 220px;
-    margin-left: 7%;
-    text-align: center;
-    font-size: 15px;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    position:relative;
+  .column{
+    width:50%;
   }
 }
 
@@ -195,26 +225,7 @@ figcaption{
   .tab {
     width:40%;
   }
-  .port {
-    float: left;
-    height:200px;
-    width:200px;
-  }
-  figcaption{
-    background-color: #4aaaa5;
-    color:white;
-    width:135px;
-    height: 30px;
-    margin-top: 220px;
-    margin-left: 7%;
-    text-align: center;
-    font-size: 15px;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    position:relative;
-  }
-
+  
   #pic {
     height: 300px;
     width: 300px;
@@ -237,9 +248,8 @@ figcaption{
     width: 550px;
     margin-left: 5px;
   }
-  h2{
-    text-align: center;
-    font-size: 22px;
+  .column{
+    width:100%;
   }
   .tab {
     width: 550px;;
